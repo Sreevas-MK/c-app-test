@@ -20,7 +20,7 @@ WORKDIR /var/application
 
 COPY --from=stage1 /var/application/app .
 
-RUN adduser -h /var/application -s /bin/sh -H c-user
+RUN adduser -D -h /var/application c-user
 
 RUN chown -R c-user:c-user /var/application
 
